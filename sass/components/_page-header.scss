@@ -22,8 +22,14 @@
     color: #fff;
   }
 
-  @media screen {
-    
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    font-size: 26px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 26px 0;
   }
 }
 
@@ -79,31 +85,56 @@
 
 .main-nav__menu {
   display: flex;
-  margin-left: 93px;
+  margin: 0 84px;
 
-  @media screen and (max-width: 480px) {
-    // display: none;
-    
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+    margin-right: 0;
   }
+
+  .main-nav__item:not(:last-child) {
+      margin-right: 50px;
+    }
 }
 
-.main-nav__item:not(:last-child) {
-  margin-right: 50px;
-}
+
 
 .main-nav__contacts {
   display: flex;
-  margin-left: auto;
+    @media screen and (max-width: 1199px) {
+      flex-direction: column;
+      padding: 21px 0;
+    }
 
-  @media screen and (max-width: 480px) {
-    // display: none;
+    @media screen and (min-width: 1200px) {
+      margin-left: auto;
+    }
+
+  .main-nav__link {
+    @media screen and (max-width: 1199px) {
+      padding: 0;
+      font-size: 12px;
+    }
+  }
+
+  .main-nav__item:not(:last-child) {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 30px;
+    }
   }
 }
 
 .main-nav__icon {
-  margin-right: 10px;
+  margin-right: 8px;
   vertical-align: middle;
   fill: currentColor;
+
+  @media screen and (min-width: 1200px) {
+   margin-right: 10px;
+  }
 }
 
 .main-nav__menu-button {
@@ -134,7 +165,9 @@
 
 .menu-container {
 
-  @media screen and (max-width: 767px) {
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
     display: none;
   }
   
