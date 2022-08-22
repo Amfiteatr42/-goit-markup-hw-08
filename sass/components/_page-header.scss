@@ -1,0 +1,144 @@
+.page-header {
+  border-bottom: 1px solid #ECECEC;
+}
+
+/* logo */
+
+.logo {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 24px;
+  // font-size: 26px;
+  line-height: 1.19;
+  color: $accent-color;
+
+  padding: 16px 0;
+
+  &--black {
+    color: #000;
+  }
+
+  &--white {
+    color: #fff;
+  }
+
+  @media screen {
+    
+  }
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+/* navigation */
+
+ .main-nav {
+   display: flex;
+   align-items: center;
+ }
+
+.main-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $main-text-color;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  transition: color $transition;
+
+    &--grey {
+      color: $secondary-text-color;
+    }
+
+    &--current {
+      position: relative;
+      color: $accent-color;
+    }
+
+    &--current::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      bottom: 0;
+    
+      border-bottom: 4px solid $accent-color;
+      border-radius: 4px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+}
+
+.main-nav__menu {
+  display: flex;
+  margin-left: 93px;
+
+  @media screen and (max-width: 480px) {
+    // display: none;
+    
+  }
+}
+
+.main-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.main-nav__contacts {
+  display: flex;
+  margin-left: auto;
+
+  @media screen and (max-width: 480px) {
+    // display: none;
+  }
+}
+
+.main-nav__icon {
+  margin-right: 10px;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.main-nav__menu-button {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: fill $transition;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  .icon-cross {
+    display: none;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-container {
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
