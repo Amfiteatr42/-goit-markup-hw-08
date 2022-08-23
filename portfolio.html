@@ -20,6 +20,7 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
+
   <body>
     <header class="page-header">
       <!-- Главная навигация -->
@@ -41,7 +42,7 @@
                 >
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="">Контакты</a>
+                <a class="main-nav__link" href="#address">Контакты</a>
               </li>
             </ul>
 
@@ -62,7 +63,7 @@
                   class="main-nav__link main-nav__link--grey"
                   href="tel:+380961111111"
                 >
-                  <svg class="main-nav__icon" width="10" height="16">
+                  <svg class="main-nav__icon" width="10" height="14">
                     <use href="./images/icons.svg#icon-tel"></use>
                   </svg>
                   +38 096 111 11 11
@@ -88,7 +89,10 @@
       </div>
 
       <div class="mobile-menu js-menu-container" id="mobile-menu">
-        <button class="main-nav__menu-button js-close-menu" type="button">
+        <button
+          class="main-nav__menu-button js-close-menu menu-toggle"
+          type="button"
+        >
           <svg width="40" height="40">
             <use
               class="icon-menu"
@@ -257,14 +261,13 @@
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
+                <div class="projects__box">
+                  <h2 class="projects__title">
+                    Постер New Orlean vs Golden Star
+                  </h2>
+                  <p class="projects__text">Дизайн</p>
+                </div>
               </a>
-
-              <div class="projects__box">
-                <h2 class="projects__title">
-                  Постер New Orlean vs Golden Star
-                </h2>
-                <p class="projects__text">Дизайн</p>
-              </div>
             </li>
             <li class="projects__item">
               <a href="" class="projects__link">
@@ -300,11 +303,11 @@
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
+                <div class="projects__box">
+                  <h2 class="projects__title">Ресторан Seafood</h2>
+                  <p class="projects__text">Приложение</p>
+                </div>
               </a>
-              <div class="projects__box">
-                <h2 class="projects__title">Ресторан Seafood</h2>
-                <p class="projects__text">Приложение</p>
-              </div>
             </li>
             <li class="projects__item">
               <a href="" class="projects__link">
@@ -634,5 +637,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
