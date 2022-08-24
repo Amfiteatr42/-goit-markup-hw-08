@@ -298,7 +298,6 @@ img {
 }
 
 .mobile-menu {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -699,16 +698,12 @@ img {
 
 /* our team */
 .team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .team {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
 }
 
 .team__title {
@@ -938,6 +933,8 @@ img {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 @media screen and (min-width: 1200px) {
   .subscribe__btn {
@@ -953,6 +950,28 @@ img {
   background-repeat: no-repeat;
   background-size: contain;
   margin-left: 10px;
+  transition: transform 0.3s linear;
+}
+.subscribe__btn::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icon-send.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 74%;
+  transform: translate(-200%, 200%) scale(0.2);
+  transition: transform 0.3s linear;
+}
+
+.subscribe__btn:hover::after {
+  transform: translate(200%, -200%) scale(1.6);
+}
+
+.subscribe__btn:hover::before {
+  transform: translate(0%, 0%) scale(1);
 }
 
 /* page portfolio */
